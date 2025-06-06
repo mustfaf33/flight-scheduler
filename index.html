@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تنسيق الطائرات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="login-section">
+    <form id="login-form">
+      <h2>تسجيل الدخول</h2>
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+      <input type="password" name="password" placeholder="كلمة المرور" required />
+      <button type="submit">دخول</button>
+    </form>
+  </section>
+
+  <section id="main-section" style="display:none">
+    <div class="header">
+      <h2>مرحباً، <span id="user-email"></span></h2>
+      <button id="logout-btn">تسجيل الخروج</button>
+    </div>
+
+    <form id="flight-form">
+      <h3>إضافة رحلة جديدة</h3>
+      <input type="text" name="date" placeholder="تاريخ الرحلة" required />
+      <input type="text" name="flightNumber" placeholder="FLT.NO" required />
+      <input type="time" name="onChocksTime" placeholder="ON chocks Time" required />
+      <input type="time" name="openDoorTime" placeholder="Open Door Time" required />
+      <input type="time" name="startCleaningTime" placeholder="Start Cleaning Time" required />
+      <input type="time" name="completeCleaningTime" placeholder="Complete Cleaning Time" required />
+      <input type="time" name="readyBoardingTime" placeholder="Ready Boarding Time" required />
+      <input type="time" name="startBoardingTime" placeholder="Start Boarding Time" required />
+      <input type="time" name="completeBoardingTime" placeholder="Complete Boarding Time" required />
+      <input type="time" name="closeDoorTime" placeholder="Close Door Time" required />
+      <input type="time" name="offChocksTime" placeholder="Off chocks Time" required />
+      <input type="text" name="name" placeholder="اسم المستخدم" required />
+      <input type="text" name="notes" placeholder="ملاحظات" />
+      <button type="submit">حفظ الرحلة</button>
+    </form>
+
+    <div class="controls">
+      <button id="export-pdf">📄 تصدير PDF</button>
+      <button id="export-word">📄 تصدير Word</button>
+    </div>
+
+    <div id="flights-container">
+      <h3>الرحلات</h3>
+      <table id="flights-table">
+        <thead>
+          <tr>
+            <th>التاريخ</th><th>FLT.NO</th><th>ON</th><th>Open</th><th>Start</th><th>Complete</th>
+            <th>Ready</th><th>Start Boarding</th><th>Complete Boarding</th><th>Close</th><th>OFF</th>
+            <th>الاسم</th><th>ملاحظات</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>
